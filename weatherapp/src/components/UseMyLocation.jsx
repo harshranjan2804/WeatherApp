@@ -24,7 +24,7 @@ const UseMyLocation = ({ onLocationSuccess }) => {
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         const { latitude, longitude } = pos.coords;
-        fetchByCoordinatess(latitude, longitude);
+        fetchByCoordinates(latitude, longitude);
       },
       () => {
         alert("Permission denied or location unavailable.");
