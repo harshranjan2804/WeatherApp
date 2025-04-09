@@ -1,4 +1,3 @@
-// Redesigned and humanized App.jsx layout
 import React, { useState, useEffect } from "react";
 import SearchBar from "./components/SearchBar";
 import WeatherCard from "./components/WeatherCard";
@@ -25,6 +24,7 @@ const App = () => {
 
     setLoading(true);
     try {
+      // api for 5 day forecast
       const [weatherRes, forecastRes] = await Promise.all([
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${apiKey}&units=metric`),
         fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${query}&appid=${apiKey}&units=metric`)
