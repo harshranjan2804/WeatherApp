@@ -23,7 +23,8 @@ const WeatherCard = ({ data }) => {
       />
       <p className="text-xl capitalize mb-1">{weather[0].description}</p>
       <p className="text-4xl font-bold text-blue-600 dark:text-yellow-300 mb-1">
-        {temp}°C
+        {temp}°C 
+        {/* typed Alt + 0176 for degree symbol */}
       </p>
       <div className="flex justify-around text-sm text-gray-700 dark:text-gray-300 mt-4">
         <div>
