@@ -3,7 +3,7 @@ import React from "react";
 const UseMyLocation = ({ onLocationSuccess }) => {
   const apiKey = "acec4bff5a722bb91db6a590d8dae764";
 
-  const fetchByCoords = async (lat, lon) => {
+  const fetchByCoordinates = async (lat, lon) => {
     try {
       const response = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`
@@ -24,7 +24,7 @@ const UseMyLocation = ({ onLocationSuccess }) => {
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         const { latitude, longitude } = pos.coords;
-        fetchByCoords(latitude, longitude);
+        fetchByCoordinatess(latitude, longitude);
       },
       () => {
         alert("Permission denied or location unavailable.");
@@ -37,7 +37,7 @@ const UseMyLocation = ({ onLocationSuccess }) => {
       onClick={handleLocationClick}
       className="px-4 py-2 mt-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition"
     >
-      Use My Location
+      Current Location
     </button>
   );
 };
